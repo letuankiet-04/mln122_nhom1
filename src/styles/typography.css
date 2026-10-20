@@ -1,0 +1,93 @@
+/**
+ * Typography Tokens & Vietnamese Font Hierarchy
+ * Primary: 'Be Vietnam Pro', with fallback to 'Inter', Arial, sans-serif
+ */
+
+:root {
+  --font-family-sans: 'Be Vietnam Pro', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --font-family-serif: 'Be Vietnam Pro', 'Inter', Georgia, serif;
+  --font-family-mono: 'JetBrains Mono', Menlo, Monaco, Consolas, monospace;
+
+  /* Typographic Scale */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px - Standard Academic Reading */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.65;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 1.85;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0.005em;
+  --letter-spacing-wide: 0.025em;
+}
+
+/* Global Font Enforcement */
+html,
+body,
+input,
+textarea,
+button,
+select {
+  font-family: var(--font-family-sans) !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings: 600-700 weight, never pure uppercase on long Vietnamese text */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-family-sans) !important;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Book page typography */
+.book-page {
+  font-family: var(--font-family-sans) !important;
+  font-size: var(--text-base);
+  line-height: var(--line-height-relaxed);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* High contrast readability in light mode */
+.book-page {
+  color: #262626; /* neutral-800 */
+}
+
+/* High contrast readability in dark mode */
+.dark .book-page {
+  color: #f5f5f5; /* neutral-100 */
+}
+
+/* KaTeX formula font isolation */
+.katex {
+  font-size: 1.05em !important;
+  text-rendering: auto;
+}
+
+.katex-display {
+  margin: 1em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0;
+}

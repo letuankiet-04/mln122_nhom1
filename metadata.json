@@ -1,0 +1,6 @@
+{
+  "name": "Econverse - Sách 3D Tương Tác MLN122: Kinh Tế Hàng Hóa & Bốn Quy Luật Cơ Bản",
+  "description": "Sách điện tử 3D tương tác học tập Kinh tế Chính trị Mác - Lênin (MLN122) chương 2: Kinh tế hàng hóa và 4 quy luật cơ bản với biểu đồ trực quan, mô phỏng và câu hỏi ôn tập.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
